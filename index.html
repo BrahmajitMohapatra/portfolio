@@ -777,6 +777,14 @@ footer{background:var(--dark);padding:40px 0;border-top:1px solid rgba(255,255,2
 [data-theme="dark"] .ds-sdlc-pill.sec{background:rgba(157,23,77,0.15);border-color:rgba(157,23,77,0.3);}
 [data-theme="dark"] .ds-sdlc-pill.data{background:rgba(133,77,14,0.15);border-color:rgba(133,77,14,0.3);}
 
+
+/* COPILOT - SDLC layout wrapper (new row) */
+.ds-sdlc-wrapper{
+  max-width:1200px;
+  margin:32px auto 0;
+  padding:0 24px;
+}
+
 /* ── Accordion subsections ── */
 .ds-body{max-width:1200px;margin:0 auto;padding:64px 24px 80px;}
 .ds-accordion{display:flex;flex-direction:column;gap:16px;}
@@ -2241,7 +2249,17 @@ footer{background:var(--dark);padding:40px 0;border-top:1px solid rgba(255,255,2
         <p class="ds-intro-body">
           This section goes beneath the headlines. It documents the actual decisions, engineering controls, and governance mechanisms that kept one of India's most complex BFSI HR transformations on track — while requirements kept changing, timelines stayed fixed, and zero production failure was non-negotiable.
         </p>
-        <!-- Bank-grade SDLC flow -->
+        
+      </div>
+    </div>
+  </div>
+
+
+<!-- COPILOT -->
+
+
+<!-- Bank-grade SDLC flow -->
+       <div class="ds-sdlc-wrapper reveal">
         <div class="ds-sdlc">
           <div class="ds-sdlc-step"><div class="ds-sdlc-pill dev">DEV</div><span class="ds-sdlc-arrow">→</span></div>
           <div class="ds-sdlc-step"><div class="ds-sdlc-pill qa">QA</div><span class="ds-sdlc-arrow">→</span></div>
@@ -2254,9 +2272,9 @@ footer{background:var(--dark);padding:40px 0;border-top:1px solid rgba(255,255,2
           <div class="ds-sdlc-step"><div class="ds-sdlc-pill live">Go-Live</div><span class="ds-sdlc-arrow">→</span></div>
           <div class="ds-sdlc-step"><div class="ds-sdlc-pill support">Post Go-Live</div></div>
         </div>
-      </div>
-    </div>
-  </div>
+       </div>
+
+
 
   <!-- Accordion body -->
   <div class="ds-body">
