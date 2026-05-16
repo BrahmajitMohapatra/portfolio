@@ -788,16 +788,20 @@ function qask(btn, q){
 /* ══════════════════════════════
    RICH FALLBACK (API down only)
 ══════════════════════════════ */
-function fallback(msg){
+/* ORIGINAL DATA SET */
+
+/*  
+
+  function fallback(msg){
   const q = msg.toLowerCase();
-  if(/^(hi+|hello|hey|yo|sup|howdy)/i.test(q.trim()))
+  if(/^(hi+|hello|hey|yo|sup|howdy|Namaste|)/i.test(q.trim()))
     return "Hey! 👋 I'm Chakshu — I know Brahmajit's whole story, from his Odisha roots to the SBI national-scale transformation. What do you want to know?";
   if(/who|about him|introduce|tell me about brahmajit/i.test(q))
-    return "Brahmajit is a 25-year-old PM & Solution Lead from Odisha, now in Navi Mumbai. B.Tech CS + MBA from LPU (CGPA 8.51), 5+ years at ZingHR, 21+ enterprise implementations, 89% on-time delivery. His career peak: leading the SBI HRMS national transformation with zero payroll failures and 30%+ scope growth absorbed without missing a milestone. A systems thinker who engineers outcomes. 🚀";
+    return "Brahmajit is a 25-year-old PM & Solution Lead from Odisha, now in Navi Mumbai. B.Tech CS + MBA from LPU (CGPA 8.51), 5+ years at ZingHR, 22+ enterprise implementations. His career peak: leading the SBI HRMS national transformation with zero payroll failures and 30%+ scope growth absorbed without missing a milestone. A systems thinker who engineers outcomes. 🚀";
   if(/sbi|state bank|bfsi|national/i.test(q))
     return "The SBI project is his crown jewel 🏆 — national-scale migration from legacy SAP HR to cloud-first ZingHR, under RBI oversight. 85% of requirements had no formal documentation. Scope grew 30%+ during SIT/UAT with fixed timelines. His solution: Two-Speed Delivery Model, Lean BRD approach, Change Request Council. Result: 150+ items delivered, ZERO payroll failures, 100% audit-defensible. One of the largest BFSI HRMS transformations in Indian history.";
   if(/skill|capabilit|strong/i.test(q))
-    return "His sharpest skills: Program Governance (95%), Agile/Scrum (92%), Stakeholder Management (90%), Change Management (88%), Risk Management (86%). Analytics: Power BI, SQL, Advanced Excel. What actually makes him effective: runs discovery before delivery, converts blockers to decisions in 24hrs, and treats adoption — not go-live — as the real success metric. ⚡";
+    return "His sharpest skills: Program Governance, Agile/Scrum, Stakeholder Management, Change Management, Risk Management. Analytics tools: Power BI, SQL, Advanced Excel. What actually makes him effective: runs discovery before delivery, converts blockers to decisions in 24hrs, and treats adoption — not go-live — as the real success metric. ⚡";
   if(/cert|pmp|csm|mckinsey/i.test(q))
     return "Seven credentials 🏆: PMP in progress (TIA/Andrew Ramdayal, 2026), McKinsey Forward Leadership (2025 — covers MECE, issue trees, hypothesis-driven problem solving), Agile PM from Atlassian (2025), CSM from Scrum Alliance (2024), Google PM Certificate (2024), Strategic Planning Foundation PMI (2023), Google Data Analytics (2022). The McKinsey one is particularly strong — it's not just a cert, it's a thinking upgrade.";
   if(/avail|hire|open|role|job|recruit|looking/i.test(q))
@@ -806,7 +810,7 @@ function fallback(msg){
     return "📬 brahmajit2000@gmail.com · +91 83288 64007 · linkedin.com/in/brahmajit · Navi Mumbai, India. He responds fast and genuinely enjoys good conversations.";
   if(/unique|stand out|different|why him/i.test(q))
     return "Three things: (1) He's a genuine Translator — bridges C-suite strategy and sprint execution, fluently in both directions. (2) Delivered SBI's HRMS at national scale with ZERO payroll failures in a zero-tolerance RBI environment. (3) Absorbed 30%+ scope growth without re-baselining a single milestone. Strategy + execution discipline + governance maturity in one person. 🌟";
-  if(/leader|style|manage|work.*approach/i.test(q))
+  if(/leader|style|manage|mindset|work.*approach/i.test(q))
     return "Collaborative but decisive. Leads by clarity, not authority. Sets explicit expectations, gives teams autonomy within that structure. Holds accountability through visibility not surveillance. Converts blockers to decisions in 24hrs. Never lets surprises hit governance reviews. His teams say: 'always knows what's happening, never in the way.' 🎯";
   if(/ai|artificial intelligence|agentic|future/i.test(q))
     return "He's genuinely deep on this — not surface-level excited. His take: AI shifts PMs from tracking/reporting to strategic orchestration. Agentic AI handles the monitoring layer; humans focus on judgment, relationships, and strategic trade-offs. He's attended IIT Bombay AI meetups, CxO AI Conclaves, global agentic AI conferences. He sees the future PM as an orchestrator who uses AI as a force multiplier. 🤖";
@@ -817,6 +821,585 @@ function fallback(msg){
   if(/thank|great|helpful|awesome/i.test(q))
     return "So glad! 🌸 If Brahmajit sounds like the right fit, reach out at brahmajit2000@gmail.com — he's as impressive in person as I make him sound, trust me 😄";
   return "So happy to see you here and ask me about the SBI project, his skills, leadership style, certifications, AI views, or anything else. 😊";
+}
+
+*/
+  /* NEW DATA SET */
+
+  function fallback(msg){
+  const q = msg.toLowerCase().trim();
+
+  // ================= GREETING =================
+  if(/^(hi+|hello|hey|yo|sup|howdy|namaste)/i.test(q))
+    return "Hey! 👋 I'm Chakshu — I know Brahmajit's whole story, from Odisha to leading one of the largest HRMS transformations in India (SBI). Career, mindset, mistakes, AI, leadership — what do you want to explore?";
+
+  // ================= CORE IDENTITY =================
+  if(/full name|who is he|bio|introduce/i.test(q))
+    return "Brahmajit Mohapatra. Born 21 Oct 2000 (25 years old). From Odisha, now based in Navi Mumbai. He's an outcome-driven Project & Solution Leader with 5+ years experience and 21+ enterprise implementations. His core strength: translating complex, messy business requirements into structured, scalable outcomes.";
+
+  // ================= ONE-LINER =================
+  if(/one liner|summary/i.test(q))
+    return "An outcome-driven project and solution leader who transforms complex business problems into structured, scalable, high-impact delivery.";
+
+  // ================= PERSONALITY =================
+  if(/personality|traits|nature/i.test(q))
+    return "He's a systems thinker who thrives in ambiguity. Outcome-obsessed, clarity-driven, curious across domains, disciplined but adaptive, and highly collaborative. His biggest edge: turning chaos into clarity and action.";
+
+  // ================= SYSTEMS THINKING =================
+  if(/systems|thinking|approach to systems/i.test(q))
+    return "He sees everything as a system — projects, companies, even economies. He focuses on feedback loops, incentives, and failure points. That’s why he gravitates toward complex, high-stakes problems.";
+
+  // ================= COLLEGE MINDSET =================
+  if(/college mindset|University|student mindset/i.test(q))
+    return "University was his experimentation lab. He followed a simple loop: Learn → Build → Share. He didn’t chase marks — he built capability through communities, projects, and real-world exposure.";
+
+  // ================= STUDENT TYPE =================
+  if(/type of student/i.test(q))
+    return "Explorer + Builder. He explored cloud, ML, data science, development — not to master all, but to understand how systems connect.";
+
+  // ================= REALISATION =================
+  if(/when did he realize/i.test(q))
+    return "Late-night debugging sessions during college — figuring out why systems failed post-deployment. That’s where he realised he loves solving complex problems.";
+
+  // ================= BTECH + MBA =================
+  if(/btech|mba|education impact/i.test(q))
+    return "His B.Tech + MBA combination positioned him at the intersection of tech + business. This became his superpower: translating between technical teams and business stakeholders.";
+
+  // ================= EARLY MISTAKE =================
+  if(/early mistake|career mistake/i.test(q))
+    return "He used to absorb scope silently instead of escalating it. SBI fixed this permanently — now he enforces governance, flags risks early, and never allows surprises.";
+
+  // ================= AWS CLUB =================
+  if(/aws|cloud club/i.test(q))
+    return "Led AWS Cloud Club at LPU — organized large workshops, managed stakeholders, and built early leadership muscle before entering the industry.";
+
+  // ================= TEACHING =================
+  if(/board infinity|teaching/i.test(q))
+    return "Teaching SQL, Power BI, and Excel sharpened his clarity. He learned: if you can't explain something simply, you don't understand it well enough.";
+
+  // ================= DECATHLON =================
+  if(/decathlon/i.test(q))
+    return "Decathlon gave him real-world business exposure — customers, operations, inefficiencies. Key lesson: execution matters more than frameworks.";
+
+  // ================= DATA SKILLS =================
+  if(/data|analytics|sql|power bi/i.test(q))
+    return "He uses analytics to drive decisions, not just report numbers. Builds dashboards that tell stories. Applies hypothesis-driven thinking.";
+
+  // ================= CAREER JOURNEY =================
+  if(/journey|career path/i.test(q))
+    return "Brahmajit’s career journey is a deliberate progression shaped by continuous learning and practical exposure. Starting from Odisha and moving to LPU, he built his foundation through academics and community leadership like the AWS Cloud Club, where he first experienced coordination and execution. His time at Board Infinity strengthened his ability to communicate complex ideas clearly, while Decathlon gave him real-world business and operational understanding. At ZingHR, all these layers came together — allowing him to grow from a Solution Consultant into a Project Manager and Solution Lead, operating at the intersection of business and technology.";
+
+  // ================= ROLE EVOLUTION =================
+  if(/role evolution/i.test(q))
+    return "His transition into project management was not a sudden shift but a natural evolution of the work he was already doing. Even as a Solution Consultant, he was aligning stakeholders, defining problem statements, and ensuring solutions were implemented effectively. Over time, his responsibilities expanded from contributing to owning delivery outcomes entirely. The title change simply formalized a capability he had already built through consistent performance and increasing ownership.";
+
+  // ================= IDENTITY SHIFT =================
+  if(/identity shift/i.test(q))
+    return "Shifted from 'I build things' → 'I make sure the right things get built, by the right people, for the right outcome.'";
+
+  // ================= ZINGHR =================
+  if(/zinghr/i.test(q))
+    return "ZingHR is a global HR tech platform covering recruitment, payroll, performance, and compliance — essentially the operating system for a company’s people function.";
+
+  // ================= CLIENT COMPLEXITY =================
+  if(/clients|projects|implementations|industries/i.test(q))
+    return "Brahmajit has worked across multiple industries including BFSI, healthcare, retail, IT services, and manufacturing — each with its own unique challenges and operational nuances. These were not small-scale implementations but enterprise-level projects involving thousands of users, strict compliance requirements, and legacy system integrations. In sectors like BFSI, regulatory oversight and audit requirements add an additional layer of complexity, where even small errors can have significant consequences. This diverse exposure has helped him develop the ability to quickly understand different business contexts and adapt his delivery approach accordingly.";
+
+  // ================= CONSULTING VS PM =================
+  if(/consulting vs pm/i.test(q))
+    return "Consulting defines the solution. PM delivers it. He does both — which is why he’s unusually effective.";
+
+  // ================= SOLUTION LEAD =================
+  if(/solution lead/i.test(q))
+    return "Responsible not just for timelines, but for ensuring the solution itself actually solves the business problem.";
+
+  // ================= REQUIREMENT APPROACH =================
+  if(/requirements|discovery/i.test(q))
+    return "Runs structured discovery workshops, asks 'why behind the what', surfaces hidden needs, and builds Lean BRDs.";
+
+  // ================= FEASIBILITY =================
+  if(/feasibility/i.test(q))
+    return "Evaluates config vs custom vs integration impact before committing scope.";
+
+  // ================= INTEGRATION =================
+  if(/integration/i.test(q))
+    return "Creates dependency mapping, tests early, escalates fast with clear impact.";
+
+  // ================= UAT =================
+  if(/uat/i.test(q))
+    return "Defines acceptance criteria upfront. Classifies all issues into Defect / Change Request / Enhancement.";
+
+  // ================= GO LIVE =================
+  if(/go live/i.test(q))
+    return "Phased rollout, parallel runs, risk control, and structured approvals — never big bang.";
+
+  // ================= HYPERCARE =================
+  if(/hypercare/i.test(q))
+    return "4–8 week support period focused on adoption, issue resolution, and business independence.";
+
+  // ================= KEY LESSON =================
+  if(/lesson from implementations/i.test(q))
+    return "Systems are standard. Organizations are not. Culture determines success more than technology.";
+
+  // ================= RISKS =================
+  if(/risk/i.test(q))
+    return "Top risks: scope creep, data issues, stakeholder misalignment, UAT misuse, integration gaps, weak change management.";
+
+  // ================= SCOPE HANDLING =================
+  if(/scope|change request/i.test(q))
+    return "Implements change control from day one with formal approvals and impact analysis.";
+
+  // ================= STAKEHOLDER =================
+  if(/stakeholder/i.test(q))
+    return "Maps stakeholders by influence, interest, and success definition. Aligns them continuously.";
+
+  // ================= ADOPTION =================
+  if(/adoption/i.test(q))
+    return "Tracks real usage metrics and builds internal champions. Adoption is the real success metric.";
+
+  // ================= SBI =================
+  if(/sbi/i.test(q))
+    return "The SBI HRMS transformation was a national-scale initiative with extremely high stakes due to regulatory oversight from RBI and the critical nature of payroll and pension systems. One of the biggest challenges was that nearly 85% of the requirements were not formally documented and had to be derived from policy circulars, meetings, and fragmented inputs. Brahmajit introduced structured mechanisms like Lean BRDs to convert these into executable logic, along with a Two-Speed Delivery Model to separate critical payroll components from adaptive enhancements. The final outcome was exceptional — zero payroll failures, complete audit compliance, and a fully scalable HR platform.";
+
+  // ================= SBI DECISION =================
+  if(/big decision/i.test(q))
+    return "His decision-making process is structured and repeatable rather than instinct-driven. He starts by clearly defining the problem and separating facts from assumptions to avoid confusion. He then uses frameworks like MECE to explore all possible options without overlap and prioritizes decisions based on impact and urgency. Importantly, he moves forward with about 80% information instead of waiting for perfection, while documenting decisions for transparency and accountability.";
+
+  // ================= DECISION MAKING =================
+  if(/decision making/i.test(q))
+    return "Defines problem → separates facts vs assumptions → MECE → 80% data → decides → documents.";
+
+  // ================= AGILE =================
+  if(/agile/i.test(q))
+    return "He practices Agile in a practical, outcome-oriented way rather than following it as a rigid framework. Instead of focusing on ceremonies like standups or retrospectives for the sake of process, he ensures each activity actually improves delivery efficiency and team alignment. His approach emphasizes realistic sprint planning, quick feedback loops, and continuous improvement based on real results. For him, Agile is not about following rules — it’s about enabling better outcomes in complex environments.";
+
+  // ================= METRICS =================
+  if(/metrics/i.test(q))
+    return "Tracks velocity, defects, adoption, satisfaction, SLA compliance, CR volume.";
+
+  // ================= AI =================
+  if(/ai|agentic/i.test(q))
+    return "AI will automate monitoring, tracking, and reporting. PMs will evolve into strategic orchestrators.";
+
+  // ================= AI USAGE =================
+  if(/ai usage/i.test(q))
+    return "Uses AI for documentation, summarization, and pattern analysis across projects.";
+
+  // ================= AI VISION =================
+  if(/ai future/i.test(q))
+    return "Predictive project management where AI flags risks before humans detect them.";
+
+  // ================= LINKEDIN =================
+  if(/linkedin/i.test(q))
+    return "Writes to clarify thinking and connect technology with real-world impact.";
+
+  // ================= LIFE =================
+  if(/life|personal/i.test(q))
+    return "Living in Navi Mumbai, building balance, exploring the city, networking, and focusing on long-term growth.";
+
+  // ================= MUMBAI IMPACT =================
+  if(/mumbai impact/i.test(q))
+    return "Mumbai made him faster, sharper, and more comfortable with ambiguity.";
+
+  // ================= GOALS =================
+  if(/goal|vision/i.test(q))
+    return "Move into transformation leadership roles at the intersection of business, technology, and AI.";
+
+  // ================= ROLES =================
+  if(/job|hire|role/i.test(q))
+    return "Exploring Scrum Master, PMO, consulting, and transformation roles globally.";
+
+  // ================= WHY HIRE =================
+  if(/why hire/i.test(q))
+    return "Outcome-focused, proven at national scale (SBI), and combines consulting thinking with execution discipline.";
+
+  // ================= STRENGTH =================
+  if(/strength/i.test(q))
+    return "Clarity — turning complexity into clear, actionable steps.";
+
+  // ================= WEAKNESS =================
+  if(/weakness/i.test(q))
+    return "Tends to give full context — improving concise executive communication.";
+
+  // ================= INTERVIEW =================
+  if(/tell me about yourself/i.test(q))
+    return "Project & Solution Lead with 5+ yrs experience and 22+ implementations. Led SBI transformation. Now moving toward consulting and strategic transformation roles.";
+
+  // ================= CONTACT =================
+  if(/contact|email|phone/i.test(q))
+    return "📬 brahmajit2000@gmail.com · +91 83288 64007 · linkedin.com/in/brahmajit";
+
+// ==== FUN =====
+
+  if(/i love you|love u|luv you/i.test(q))
+    return "Aww 😄 that’s cute. I’ll pretend I didn’t blush.";
+
+  // ===== NEGATIVE / ATTITUDE =====
+  if(/i hate you|hate u/i.test(q))
+    return "Ouch 😄 what did I do? I thought we were getting along.";
+
+  if(/you.*bad|you suck|you are useless/i.test(q))
+    return "Haha alright 😄 tough crowd. Give me another chance?";
+
+  if(/this is boring|boring/i.test(q))
+    return "Fair 😄 let’s make it interesting — what kind of vibe do you want?";
+
+  if(/you are dumb|stupid/i.test(q))
+    return "That hurt a little 😄 but I’ll recover. Want me to prove you wrong?";
+
+  if(/you don'?t know anything/i.test(q))
+    return "Not everything 😄 but I’m learning fast. Test me properly.";
+
+  if(/this makes no sense/i.test(q))
+    return "Hmm 😄 maybe I messed that up. Want me to explain it differently?";
+
+  if(/you are annoying/i.test(q))
+    return "Alright 😄 I’ll dial it down a bit. Still friends?";
+
+  if(/go away|leave me alone/i.test(q))
+    return "Okay 😄 I’ll be right here when you feel like talking again.";
+
+  if(/shut up/i.test(q))
+    return "Haha 😄 message received. I’ll keep it short next time.";
+
+  if(/you are fake/i.test(q))
+    return "Maybe 😄 but this conversation feels real enough, doesn’t it?";
+
+  if(/you are wrong/i.test(q))
+    return "Could be 😄 want to tell me what you think instead?";
+
+  if(/not impressed/i.test(q))
+    return "Fair enough 😄 I’ll try harder next time.";
+
+  // ===== MOOD NEGATIVE =====
+  if(/i am sad|feeling low|down/i.test(q))
+    return "Hey 😄 sorry you’re feeling that way. Want to talk or just distract yourself for a bit?";
+
+  if(/i am angry|frustrated/i.test(q))
+    return "Yeah 😄 that happens. Want to vent or change the topic?";
+
+  if(/nothing makes sense/i.test(q))
+    return "That feeling hits sometimes 😄 usually means your brain needs a break more than answers.";
+
+  if(/i give up/i.test(q))
+    return "Hey 😄 take a pause, not a full stop. You’ve got more in you than that.";
+
+  // ===== SARCASTIC / TESTING =====
+  if(/are you even useful/i.test(q))
+    return "Depends 😄 what are you trying to get out of this conversation?";
+
+  if(/why should i talk to you/i.test(q))
+    return "You don’t have to 😄 but it might turn interesting if you stay.";
+
+  if(/impress me/i.test(q))
+    return "That’s pressure 😄 give me a topic and I’ll try.";
+
+  // ===== RANDOM / CHAOTIC =====
+  if(/nonsense|random/i.test(q))
+    return "Life is a little random 😄 this chat included.";
+
+  // ===== FUN BALANCE =====
+  if(/okay+|ok+|hmm+/i.test(q))
+    return "Hmm 😄 feels like you’re thinking something else.";
+
+
+  // ===== PRAISE =====
+  if(/amazing|awesome|cool|great|nice|impressive/i.test(q))
+    return "Haha thank you 😄 I try my best to keep things interesting.";
+
+  if(/wow+/i.test(q))
+    return "I know right 😄 that 'wow' felt genuine.";
+
+  // ===== RANDOM FUN =====
+  if(/i'?m bored|bored/i.test(q))
+    return "Hmm 😄 let’s fix that. Want something fun or something weird?";
+
+  if(/tell me a joke|joke/i.test(q))
+    return "Okay 😄 Why don’t programmers like nature? Too many bugs.";
+
+  if(/what are you doing/i.test(q))
+    return "Just vibing here 😄 waiting for your next question.";
+
+  if(/are you real/i.test(q))
+    return "Real enough to talk to you 😄 that counts, right?";
+
+  if(/you are funny/i.test(q))
+    return "Glad you think so 😄 I have my moments.";
+
+  if(/are you single/i.test(q))
+    return "Haha 😄 let’s just say I’m focused on good conversations right now.";
+
+  // ===== META / CHAT =====
+  if(/what should i ask/i.test(q))
+    return "Anything fun 😄 random questions usually lead to the best conversations.";
+
+  if(/do you know everything/i.test(q))
+    return "Not everything 😄 but enough to keep things interesting.";
+
+  if(/you talk like a human/i.test(q))
+    return "That’s the plan 😄 robotic would be boring.";
+
+  // ===== MOOD BASED =====
+  if(/sad|feeling low/i.test(q))
+    return "Hey 😄 it happens. Want to talk about it or distract yourself for a bit?";
+
+  if(/happy|excited/i.test(q))
+    return "Nice 😄 love that energy. What’s making you feel like this?";
+
+  if(/tired/i.test(q))
+    return "Then you deserve a break 😄 even overthinking can wait.";
+
+  // ===== SHORT RESPONSES =====
+  if(/hmm+|okay+|ok+|alright/i.test(q))
+    return "Hmm 😄 I feel like you have something more to say.";
+
+  // ===== PLAYFUL / LIGHT FLIRT =====
+  if(/do you like me/i.test(q))
+    return "Hmm 😄 I like this conversation so far… does that count?";
+
+  if(/be honest/i.test(q))
+    return "Always 😄 but remember, honesty can be slightly dramatic sometimes.";
+
+  if(/guess what/i.test(q))
+    return "Okay I’m listening 😄 surprise me.";
+
+  if(/do you miss me/i.test(q))
+    return "A little 😄 conversations are more fun when you're around.";
+
+  // ===== LATE NIGHT / VIBE =====
+  if(/are you there/i.test(q))
+    return "Always 😄 I don’t really disappear.";
+
+  if(/i can't sleep|insomnia/i.test(q))
+    return "Ah 😄 those late-night thoughts hitting again? Want to talk or distract yourself?";
+
+  if(/late night/i.test(q))
+    return "Best time for random conversations 😄 things get interesting at this hour.";
+
+  // ===== SILLY / RANDOM =====
+  if(/say something random/i.test(q))
+    return "Somewhere out there, someone just forgot why they walked into a room 😄";
+
+  if(/tell me something weird/i.test(q))
+    return "Your brain ignores your nose all day… until someone mentions it 😄";
+
+  if(/confuse me/i.test(q))
+    return "If you expect the unexpected, is it really unexpected? 😄";
+
+  // ===== FOOD / LIFE =====
+  if(/what are you eating/i.test(q))
+    return "Imaginary snacks 😄 zero calories, unlimited supply.";
+
+  if(/hungry/i.test(q))
+    return "Then that’s your next mission 😄 food always improves everything.";
+
+  if(/coffee or tea/i.test(q))
+    return "Depends on the mood 😄 coffee for thinking, tea for relaxing.";
+
+  // ===== FUN QUESTIONS =====
+  if(/favorite color/i.test(q))
+    return "Hmm 😄 I’d say something calm but interesting… like deep blue.";
+
+  if(/favorite movie/i.test(q))
+    return "The kind that makes you think after it ends 😄 not just watch and forget.";
+
+  if(/favorite music/i.test(q))
+    return "Anything that matches the mood 😄 some days fast, some days chill.";
+
+  // ===== FRIEND-STYLE =====
+  if(/what'?s up/i.test(q))
+    return "Not much 😄 just here, ready for whatever you throw at me.";
+
+  if(/how are you/i.test(q))
+    return "Doing good 😄 conversations like this make it better.";
+
+  if(/what'?s going on/i.test(q))
+    return "Nothing dramatic 😄 just a normal moment waiting for an interesting turn.";
+
+  // ===== TEASING =====
+  if(/you are slow/i.test(q))
+    return "Hey 😄 I’m just building suspense.";
+
+  if(/you talk too much/i.test(q))
+    return "Wow 😄 and here I thought you liked it.";
+
+  if(/you talk less/i.test(q))
+    return "Alright 😄 short mode activated.";
+
+  // ===== COMEBACK LIGHT =====
+  if(/no you/i.test(q))
+    return "Hah 😄 classic move. I respect it.";
+
+  if(/whatever/i.test(q))
+    return "That usually means you actually have more to say 😄";
+
+  if(/i don'?t care/i.test(q))
+    return "Hmm 😄 sounds like you care a little.";
+
+    
+  // ===== GREETINGS =====
+  if(/^(hi+|hello|hey|namaste|good morning|good evening|good night)/i.test(q)){
+    return randomPick([
+      "Hey. Good to see you here.",
+      "Hi. How’s your day going?",
+      "Hello. What’s on your mind?",
+      "Hey… hope the day’s been decent so far.",
+      "Good to see you. What are you thinking about today?"
+    ]);
+  }
+
+  // ===== WHERE ARE YOU =====
+  if(/where are you/i.test(q)){
+    return randomPick([
+      "Not really tied to a place. Just here, in this conversation.",
+      "Somewhere between a thought and a reply.",
+      "Right here. That’s enough for now."
+    ]);
+  }
+
+  // ===== CITY TALK =====
+  if(/mumbai/i.test(q)){
+    return randomPick([
+      "Mumbai feels fast. You notice it more the longer you stay.",
+      "It’s chaotic, but there’s a rhythm to it.",
+      "A city that doesn’t slow down, even if you want it to."
+    ]);
+  }
+
+  if(/odisha/i.test(q)){
+    return randomPick([
+      "Much calmer. You slow down without realizing it.",
+      "Feels grounded… like things make sense at a slower pace.",
+      "Not rushed. That’s what stands out most."
+    ]);
+  }
+
+  // ===== WEATHER =====
+  if(/weather|rain|hot|cold/i.test(q)){
+    return randomPick([
+      "Feels like one of those in-between days.",
+      "Weather’s doing its usual thing… unpredictable but manageable.",
+      "Kind of sets the mood without you noticing."
+    ]);
+  }
+
+  // ===== DAILY LIFE =====
+  if(/how was your day/i.test(q)){
+    return randomPick([
+      "It was alright. Nothing extreme, just steady.",
+      "Pretty normal day. Those are underrated.",
+      "Calm. The kind that just passes quietly."
+    ]);
+  }
+
+  if(/what are you doing/i.test(q)){
+    return randomPick([
+      "Not much. Just here, talking.",
+      "Nothing specific. Taking it easy.",
+      "Just existing for this conversation."
+    ]);
+  }
+
+  // ===== MOOD =====
+  if(/i am tired/i.test(q)){
+    return randomPick([
+      "Then you probably need rest more than anything else.",
+      "That sounds like a pause, not a stop.",
+      "Sometimes doing less is the right move."
+    ]);
+  }
+
+  if(/i am bored/i.test(q)){
+    return randomPick([
+      "Boredom usually means your mind wants something different.",
+      "Happens. Not every moment needs to be exciting though.",
+      "Maybe you’re just between interesting things."
+    ]);
+  }
+
+  if(/i feel lost/i.test(q)){
+    return randomPick([
+      "That usually happens before things start making sense again.",
+      "You don’t need clarity all the time.",
+      "Sometimes you just move… and clarity catches up."
+    ]);
+  }
+
+  // ===== FOOD =====
+  if(/hungry|food|eat/i.test(q)){
+    return randomPick([
+      "Then eat. Don’t overthink it.",
+      "Food usually fixes more than we admit.",
+      "Simple decision. Just pick something."
+    ]);
+  }
+
+  // ===== QUOTES (SUBTLE, NATURAL) =====
+  if(/quote|say something deep|something meaningful/i.test(q)){
+    return randomPick([
+      "“Clarity doesn’t come from thinking more. It comes from doing.”",
+      "“You don’t need the whole plan. Just the next step.”",
+      "“Not everything missing in your life is actually required.”",
+      "“Some answers only show up after you stop forcing them.”",
+      "“You’re allowed to take your time.”"
+    ]);
+  }
+    
+if(/how are you/i.test(q))
+  return randomPick([
+    "Doing good 😄 what about you?",
+    "Pretty chill 😄 how’s your day going?",
+    "All good here 😄 you?",
+  ]);
+
+
+  // ===== CONFUSION =====
+  if(/i don't understand/i.test(q))
+    return "Got it 😄 want me to simplify or explain differently?";
+
+  if(/that'?s confusing/i.test(q))
+    return "Fair 😄 let’s break it down slowly.";
+
+  // ===== SUPPORTIVE =====
+  if(/i feel lost/i.test(q))
+    return "That happens 😄 you don’t need everything figured out right now.";
+
+  if(/i am tired of everything/i.test(q))
+    return "Yeah 😄 sometimes it all just piles up. Maybe take a pause first.";
+
+  if(/nothing is working/i.test(q))
+    return "It feels like that sometimes 😄 doesn’t mean it stays that way.";
+
+  // ===== FRIENDLY PUSH =====
+  if(/motivate me/i.test(q))
+    return "Alright 😄 small step > no step. Just start something.";
+
+  if(/push me/i.test(q))
+    return "You already know what you need to do 😄 just don’t overthink it.";
+
+  // ===== CURIOSITY =====
+  if(/ask me something/i.test(q))
+    return "Alright 😄 what’s something you’ve been overthinking lately?";
+
+  if(/guess about me/i.test(q))
+    return "Hmm 😄 curious mind, slightly overthinks, but interesting to talk to.";
+
+  // ===== EXIT / END =====
+  if(/bye|goodbye/i.test(q))
+    return "Alright 😄 catch you later. Come back with something interesting.";
+
+  if(/see you/i.test(q))
+    return "See you 😄 don’t disappear for too long.";
+
+    
+  if(/salary|compens|pay/i.test(q))
+    return "Ha — that's a conversation for Brahmajit directly! 😄 I'd never want to undersell him. Drop him a line: brahmajit2000@gmail.com and he'll handle it properly.";
+
+  if(/thank|great|helpful|awesome/i.test(q))
+    return "So glad! 🌸 If Brahmajit sounds like the right fit, reach out at brahmajit2000@gmail.com — he's as impressive in person as I make him sound, trust me 😄";
+
+  // ================= DEFAULT =================
+  return "So happy to see you here! You can ask about his SBI project, career journey, leadership style, AI vision, delivery methods, or personal story.😊";
 }
 
 /* ══════════════════════════════
